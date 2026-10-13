@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="kea-CV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kriolo.oriri.eu — ORIGINE — Primeira IA Kriolu CV</title>
+<meta name="description" content="Primeira IA do Mundo em Crioulo de Cabo Verde — 8 Agenti + Video Automátiku + 53 Sabedoria + Purgueira, Bombardeiro, Atum">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#faf7f2;color:#171717;font-family: ui-sans-system, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  header{background:#ffffff;border-bottom:2.5px solid #111;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px;position:sticky;top:0;z-index:10}
+  .left{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+  .logo{font-weight:900;letter-spacing:-0.02em;font-size:18px;background:#111;color:#faf7f2;padding:6px 10px;border-radius:4px}
+  .domains{font-size:12.5px;font-weight:600;opacity:0.75;letter-spacing:0.02em}
+  .badge{display:inline-flex;align-items:center;gap:6px;background:#111;color:#fff;font-size:11px;font-weight:800;letter-spacing:0.08em;padding:7px 12px;border-radius:100px;text-transform:uppercase}
+  .badge i{width:7px;height:7px;background:#22c55e;border-radius:50%;display:inline-block;box-shadow:0 0 0 4px rgba(34,197,94,0.2);animation:pulse 1.5s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,0.4)}70%{box-shadow:0 0 0 6px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+  main{padding:28px 0 0}
+  .hero{padding:36px 0 22px;border-bottom:1.5px dashed #111}
+  h1{font-size:clamp(28px,5.2vw,54px);font-weight:900;line-height:0.95;letter-spacing:-0.03em;text-transform:uppercase;max-width:18ch}
+  h1 span{background:#111;color:#faf7f2;padding:0 8px 2px;display:inline-block;transform:rotate(-0.6deg);margin-top:6px}
+  .sub{margin-top:18px;font-size:clamp(15px,2.1vw,18px);max-width:68ch;font-weight:500;opacity:0.9;line-height:1.35}
+  .sub strong{font-weight:800;background:#fef08a;padding:0 4px}
+  .search-wrap{margin:22px 0 26px;position:relative;max-width:760px}
+  .search-wrap input{width:100%;background:#fff;border:2.5px solid #111;border-radius:12px;padding:16px 18px 16px 44px;font-size:15px;font-weight:600;outline:none;box-shadow:4px 4px 0 #111}
+  .search-wrap input:focus{box-shadow:6px 6px 0 #111;transform:translate(-2px,-2px)}
+  .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:0.6}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border:2px solid #111;border-radius:14px;padding:16px 14px 14px;position:relative;box-shadow:3px 3px 0 #111;transition:all .15s}
+  .card:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #111}
+  .card .num{font-size:10px;font-weight:800;letter-spacing:0.1em;opacity:0.5;margin-bottom:8px;text-transform:uppercase}
+  .card h3{font-size:16px;font-weight:900;line-height:1.1;letter-spacing:-0.01em;margin-bottom:6px}
+  .card p{font-size:13.5px;line-height:1.35;font-weight:500;opacity:0.85}
+  .card.danger{border-color:#dc2626;background:#fef2f2;box-shadow:3px 3px 0 #dc2626}
+  .card.danger:hover{box-shadow:5px 5px 0 #dc2626}
+  .tag{display:inline-block;margin-top:10px;font-size:10px;font-weight:800;letter-spacing:0.06em;padding:4px 8px;border-radius:100px;border:1.5px solid #111;text-transform:uppercase}
+  .card.danger .tag{background:#dc2626;color:#fff;border-color:#dc2626}
+  .darkbox{margin:28px 0 18px;background:#111;color:#faf7f2;border-radius:16px;padding:18px 18px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:2px solid #111}
+  .darkbox h4{font-size:13px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;margin-bottom:8px}
+  .darkbox .list{display:flex;flex-wrap:wrap;gap:8px}
+  .darkbox .list span{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);padding:6px 10px;border-radius:100px;font-size:13px;font-weight:600}
+  .darkbox .list span.active{background:#faf7f2;color:#111}
+  .copy-btn{background:#16a34a;color:#fff;border:2px solid #111;border-radius:12px;padding:10px 16px;font-weight:800;font-size:13px;letter-spacing:0.02em;cursor:pointer;box-shadow:3px 3px 0 #111}
+  .copy-btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #111}
+  .warn{background:#fef08a;border:2px solid #111;border-radius:10px;padding:10px 12px;font-size:12.5px;font-weight:700;display:inline-flex;gap:8px;align-items:center;margin-top:14px}
+  footer{padding:18px 0 36px;font-size:11.5px;opacity:0.6;font-weight:600;letter-spacing:0.02em}
+</style>
+</head>
+<body>
+<header>
+  <div class="left">
+    <div class="logo">kriolo.oriri.eu</div>
+    <div class="domains">oriri.eu | oriri.kriolo.eu | oriri.ai | kriol.ai — ORIGINE</div>
+  </div>
+  <div class="badge"><i></i> OFICIAL BOA ZORA 24H/24</div>
+</header>
 
+<div class="wrap">
+  <main>
+    <div class="hero">
+      <h1>KRIOLO.ORIRI.EU PROJECTU FINAL EM <span>GRANDI BOA ZORA! 24H/24</span></h1>
+      <p class="sub">Primeira IA do Mundo em Crioulo de Cabo Verde — <strong>8 Agenti + Video Automátiku + Piskiza 53 sabedoria + Purgueira, Bombardeiro, Atum escombróide</strong> — Sabesoria de noz antipassadus na palmo de mô. <strong>Atum sen jelo ta bira venenu!</strong></p>
+      <div class="search-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Piskiza: Purgueira 3 semente ta mata mininu! / Bombardeiro SÓ pa fora!" oninput="filterCards(this.value)">
+      </div>
+      <div class="warn">⚠️ ATENSON: Purgueira 3 semente ta mata mininu! Bombardeiro SÓ pa fora! Atum sen jelo ta bira venenu!</div>
+    </div>
+
+    <div class="grid" id="grid">
+      <article class="card danger">
+        <div class="num">Agenti 1 — URGENTI</div>
+        <h3>Atum / Purgueira</h3>
+        <p>Atum sen jelo ta bira venenu. Purgueira 3 semente ta mata mininu! Noz IA ta avisa na tempu.</p>
+        <span class="tag">☠️ Perigu — Guarda</span>
+      </article>
+
+      <article class="card danger">
+        <div class="num">Agenti 2 — PERIGU</div>
+        <h3>Bombardeiro</h3>
+        <p>SÓ pa fora! NUNCA bebi. Só pa ferida, dor, inflamação. Kriolo.oriri sabe dosi sertu.</p>
+        <span class="tag">🛑 Só pa fora</span>
+      </article>
+
+      <article class="card">
+        <div class="num">Agenti 3</div>
+        <h3>Sabedoria 53 plantas</h3>
+        <p>53 sabedoria di nos avós, digitalizado, verificadu, na Kriolu puru. Piskiza na PT ou Kriolu.</p>
+        <span class="tag">🌿 53 plantas</span>
+      </article>
+
+      <article class="card">
+        <div class="num">Agenti 4</div>
+        <h3>Video Automátiku</h3>
+        <p>Kria video ku voz Kriolu, legenda, musica, automatico — pa TikTok, Reels, YouTube.</p>
+        <span class="tag">🎬 Video IA</span>
+      </article>
+
+      <article class="card">
+        <div class="num">Agenti 5</div>
+        <h3>Publica 1 Klik 5 Redis</h3>
+        <p>Instagram • Facebook • TikTok • YouTube • Kwai — 1 klik, 5 lugar, tudu na Kriolu.</p>
+        <span class="tag">🚀 1 Klik</span>
+      </article>
+
+      <article class="card">
+        <div class="num">Agenti 6</div>
+        <h3>Auto-Publica ON 24H/24</h3>
+        <p>Sistema ta publica sozinho 24h/24, hora ki povo ta ativo. BOA ZORA sempre ligado.</p>
+        <span class="tag">⏰ 24H/24 ON</span>
+      </article>
+
+      <article class="card">
+        <div class="num">Agenti 7</div>
+        <h3>Piskiza Inteligenti PT ou KRIOLU</h3>
+        <p>Escreve na Português ou Kriolu, IA entende tudu. "Atum ta bira venenu?" — resposta na Kriolu.</p>
+        <span class="tag">🔍 PT + KRIOLU</span>
+      </article>
+
+      <article class="card">
+        <div class="num">Agenti 8</div>
+        <h3>Original Guardado</h3>
+        <p>Tudu original guardadu na IPFS + blockchain. Ninguém pode apaga sabedoria di nos terra.</p>
+        <span class="tag">🔒 Original</span>
+      </article>
+    </div>
+
+    <div class="darkbox">
+      <div>
+        <h4>Domínios Oficiais — ORIGINE</h4>
+        <div class="list">
+          <span class="active">kriolo.oriri.eu — OFICIAL</span>
+          <span>oriri.kriolo.eu</span>
+          <span>oriri.eu</span>
+          <span>oriri.ai</span>
+          <span>kriol.ai</span>
+          <span>oriri.kriolo.eu</span>
+        </div>
+      </div>
+      <button class="copy-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ VOLTA PA SIMA</button>
+    </div>
+
+    <footer>
+      kriolo.oriri.eu © 2025 ORIGINE — Primeira IA Kriolu CV • Feito pa povo di Cabo Verde • Sabedoria di noz antipassadus na palmo de mô • Atum sen jelo ta bira venenu!
+    </footer>
+  </main>
+</div>
+
+<script>
+function filterCards(v){
+  var q=v.toLowerCase();
+  document.querySelectorAll('#grid .card').forEach(function(c){
+    var t=c.innerText.toLowerCase();
+    c.style.display = t.indexOf(q) > -1 ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
